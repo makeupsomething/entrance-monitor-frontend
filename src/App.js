@@ -6,11 +6,12 @@ import { Line } from 'react-chartjs-2'
 import dayjs from 'dayjs'
 
 var config = {
-  apiKey: "AIzaSyAzjKUokkEPT0K8cOQ5Qei-odkGZWfm3aY",
-  authDomain: "entrance-monitor-f99de.firebaseapp.com",
-  databaseURL: "hhttps://entrance-monitor-f99de.firebaseio.com",
-  storageBucket: "entrance-monitor-f99de.appspot.com"
+  apiKey: `${process.env.REACT_APP_API_KEY}`,
+  authDomain: `${process.env.REACT_APP_PROJECT_ID}.firebaseapp.com`,
+  databaseURL: `https://${process.env.REACT_APP_PROJECT_ID}.firebaseio.com`,
+  storageBucket: `${process.env.REACT_APP_PROJECT_ID}.appspot.com`
 };
+
 firebase.initializeApp(config)
 
 const List = () => {
