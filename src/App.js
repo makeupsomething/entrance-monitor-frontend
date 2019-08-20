@@ -83,15 +83,13 @@ const List = () => {
   };
 
   return (
-    <div>
-      <div>
+      <>
         {error && <strong>Error: {error}</strong>}
         {loading && <span>List: Loading...</span>}
         {!loading && snapshots.length > 0 && (
           <Line data={data} />
         )}
-      </div>
-    </div>
+      </>
   )
 }
 
